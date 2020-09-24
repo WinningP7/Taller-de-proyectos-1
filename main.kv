@@ -1,0 +1,28 @@
+<MainWid>:
+    canvas:
+        Color:
+            #color blanco
+            rgb: 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<StartWid>:
+    #orientacion
+    orientation: "vertical"
+    canvas:
+        Color:
+            #color azul
+            rgb: 0.3, 0.3, 0.9
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        #70%
+        size_hint_y: 0.7
+    #boton
+    Button:
+        size_hint_y: 0.1
+    BoxLayout:
+        #20%
+        size_hint_y: 0.2
