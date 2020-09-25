@@ -1,0 +1,53 @@
+WindowManager:
+    canvas.before:
+        Color:
+            rgb: 0,255,255
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+
+    MainWindow:
+    SecondWindow:
+
+
+<MainWindow>:
+    name: "main"
+           
+    GridLayout:
+        cols:1
+        
+        
+       
+        GridLayout:
+        
+            cols:2
+            
+
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text : "inicio "
+            on_release: 
+                app.root.current= "second"
+        
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text : "inicio colaborador"
+            on_release: 
+                app.root.current= "second"
+        BoxLayout:
+        
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+
+<SecondWindow>:
+    name: "second"
+
+    Button:
+        size_hint_y: 0.1
+        size_hint_x: 0.1
+        text: "Atrás"
+        on_release: 
+            app.root.current= "main"
