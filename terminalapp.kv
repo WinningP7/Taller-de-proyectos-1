@@ -9,6 +9,10 @@ WindowManager:
 
     MainWindow:
     SecondWindow:
+    ThirdWindow:
+    FourthWindow:
+    FifthWindow:
+    SixthWindow:
 
 
 <MainWindow>:
@@ -16,9 +20,7 @@ WindowManager:
            
     GridLayout:
         cols:1
-        
-        
-       
+         
         GridLayout:
         
             cols:2
@@ -44,10 +46,98 @@ WindowManager:
 
 <SecondWindow>:
     name: "second"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "main"
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "third"
 
-    Button:
-        size_hint_y: 0.1
-        size_hint_x: 0.1
-        text: "Atrás"
-        on_release: 
-            app.root.current= "main"
+<ThirdWindow>
+    name: "third"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "second"
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "fourth"
+       
+<FourthWindow>
+    name: "fourth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "third"
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "fifth"
+<FifthWindow>
+    name: "fifth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "fourth"
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "sixth"
+<SixthWindow>
+    name: "sixth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "fifth"
+        
