@@ -9,6 +9,15 @@ WindowManager:
 
     MainWindow:
     SecondWindow:
+<<<<<<< Updated upstream
+=======
+    ThirdWindow:
+    FourthWindow:
+    FifthWindow:
+    SixthWindow:
+    SeventhWindow:
+    EigthWindow:
+>>>>>>> Stashed changes
 
 
 <MainWindow>:
@@ -30,20 +39,25 @@ WindowManager:
             text : "inicio "
             on_release: 
                 app.root.current= "second"
+        BoxLayout:
+        
+            size_hint_y: 0.03
+            size_hint_x: 0.1
         
         Button:
             size_hint_y: 0.1
             size_hint_x: 0.1
             text : "inicio colaborador"
             on_release: 
-                app.root.current= "second"
+                app.root.current= "seventh"
         BoxLayout:
         
-            size_hint_y: 0.1
+            size_hint_y: 0.3
             size_hint_x: 0.1
 
 <SecondWindow>:
     name: "second"
+<<<<<<< Updated upstream
 
     Button:
         size_hint_y: 0.1
@@ -51,3 +65,241 @@ WindowManager:
         text: "Atrás"
         on_release: 
             app.root.current= "main"
+=======
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+
+            GridLayout:
+        
+            Label:
+
+                text:'Seleccionar origen y destino'                                                   
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+                text_size: self.size
+                valign: 'middle'
+                halign: 'left'
+                
+               
+                    
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "main"
+        BoxLayout:
+        
+            size_hint_y: 0.03
+            size_hint_x: 0.1  
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "third"
+        BoxLayout:
+        
+            size_hint_y: 0.3
+            size_hint_x: 0.1        
+
+<ThirdWindow>
+    name: "third"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+            GridLayout:
+            Label:
+                text:'Seleccionar Termninal y ruta'
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "second"
+        BoxLayout:
+        
+            size_hint_y: 0.03
+            size_hint_x: 0.1 
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "fourth"
+        BoxLayout:
+        
+            size_hint_y: 0.3
+            size_hint_x: 0.1 
+       
+<FourthWindow>
+    name: "fourth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+            GridLayout:
+            Label:
+                text:'Mostrar Ruta'
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "third"
+        BoxLayout:
+        
+            size_hint_y: 0.03
+            size_hint_x: 0.1 
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "fifth"
+        BoxLayout:
+        
+            size_hint_y: 0.3
+            size_hint_x: 0.1
+<FifthWindow>
+    name: "fifth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+            GridLayout:
+            Label:
+                text:'Seleccionar Empresa de Bus'
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "fourth"
+        BoxLayout:
+        
+            size_hint_y: 0.03
+            size_hint_x: 0.1 
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                app.root.current= "sixth"
+        BoxLayout:
+        
+            size_hint_y: 0.3
+            size_hint_x: 0.1
+<SixthWindow>
+    name: "sixth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+            GridLayout:
+            Label:
+                text:'Visualizar detalles de viaje'
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+            
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                app.root.current= "fifth"
+        BoxLayout:
+        
+            size_hint_y: 0.3
+            size_hint_x: 0.1
+<SeventhWindow>
+    name: "seventh"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+            GridLayout:
+            Label:
+                text:'Login usuario colaborador'
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+            
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Cancelar"
+            on_release: 
+                app.root.current= "second"       
+
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Aceptar"
+            on_release: 
+                app.root.current= "eigth"
+<EigthWindow>
+    name: "eigth"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+            GridLayout:
+            Label:
+                text:'Localizar terminal'
+                color: 1,0,1,1
+                canvas.before:
+                    Color:
+                        rgba: 191/255.0, 144/255.0, 63/255.0, 1
+            
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Localizar terminal"
+            on_release: 
+                app.root.current= "second"       
+
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Cancelar"
+            on_release: 
+                app.root.current= "second"
+    
+        
+        
+>>>>>>> Stashed changes

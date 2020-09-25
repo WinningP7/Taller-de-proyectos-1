@@ -16,7 +16,22 @@ class MainWindow(Screen):
 
 class SecondWindow(Screen):
     pass
+<<<<<<< Updated upstream
 
+=======
+class ThirdWindow(Screen):
+    pass
+class FourthWindow(Screen):
+    pass
+class FifthWindow(Screen):
+    pass
+class SixthWindow(Screen):
+    pass
+class SeventhWindow(Screen):
+    pass
+class EigthWindow(Screen):
+    pass
+>>>>>>> Stashed changes
 class WindowManager(ScreenManager):
     pass
 
