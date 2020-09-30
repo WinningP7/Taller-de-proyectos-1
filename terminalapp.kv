@@ -46,12 +46,55 @@ WindowManager:
 
 <SecondWindow>:
     name: "second"
+    
     GridLayout:
         cols:1
          
         GridLayout:
         
             cols:2
+        
+        # FloatLayout:
+        #     Button:
+        #         #tamaño del widget
+        #         size_hint: (1/4, 1/4)
+        #         #posicionamiento con respecto de widget y ventana
+        #         pos_hint: {'x': 0.1,'y': 1.3}
+        #         text: "Origen"
+                
+            
+        # FloatLayout:
+        #     Button:
+        #         #tamaño del widget
+        #         size_hint: (1/4, 1/4)
+        #         pos_hint: {'x': 0.6,'y': 2.3}
+        #         text: "Destino"
+        FloatLayout:
+            Label:
+                text: "Elegir Ruta"
+                pos_hint:{'x':0.04,'y':0.5}
+                color: 1,0,1,1
+                
+        FloatLayout:
+            Spinner:
+                text: "Ciudad Origen"
+                size_hint:(1/3, 1/3)
+                pos_hint:{'x':0.1,'y':1.3}
+                values:["Huancayo","Lima"]
+                on_text:
+                    root.on_spinner_select(text)
+        
+        FloatLayout:
+            Spinner:
+                text: "Ciudad Destino"
+                size_hint:(1/3, 1/3)
+                pos_hint:{'x':0.6,'y':2.3}
+                values:["Huancayo","Lima"]
+                on_text:
+                    root.on_spinner_select(text)
+            
+            
+
         Button:
             size_hint_y: 0.1
             size_hint_x: 0.1
@@ -64,6 +107,8 @@ WindowManager:
             text: "siguiente ventana"
             on_release: 
                 app.root.current= "third"
+        
+        
 
 <ThirdWindow>
     name: "third"
