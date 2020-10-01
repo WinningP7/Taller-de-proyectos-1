@@ -1,0 +1,64 @@
+#: include kv/dashboard.kv
+#: include kv/settingsscreen.kv
+#: include kv/selorigendestino.kv
+NavigationLayout:
+    id: nav_layout 
+    ScreenManager:
+        Screen:
+            #FloatLayout:
+            BoxLayout:
+                orientation: "vertical"
+                MDToolbar:
+                    title: app.title
+                    elevation: 10
+                    left_action_items:[["menu", lambda x: nav_drawer.set_state()]]
+                    pos_hint:{'center_x':0.5,'center_y':0.95}
+                    #agregar boton para cambiar al navegador
+                    
+                ScreenManager:
+                    id:screen_manager
+                    DashBoard:
+                        id:dashboard 
+                        name: "dashboard"
+                    SettingsScreen:
+                        id:settings_screen
+                        name: "settings_screen"
+                    SelOrigenDestino:
+                        id:selorigen_destino
+                        name:"selorigen_destino"
+
+
+
+    MDNavigationDrawer:
+        id: nav_drawer
+        BoxLayout:
+            orientation: "vertical"
+            padding: "8dp"
+            spacing:"8dp"
+
+            Image:
+                #le damos parametros
+                size_hint: None, None
+                #tamaño
+                size: "200dp","200dp"
+                #fuente de la imagen 
+                source:"logo.png"
+                #agregar 
+            
+            ScrollView:
+                MDList:
+                    OneLineIconListItem:
+                        text:"DashBoard"
+                        on_release:
+                            screen_manager.current= "dashboard"
+
+                            nav_drawer.set_state()
+                        IconLeftWidget:
+                            icon: "view-dashboard"
+                    OneLineIconListItem:
+                        text:"Ajustes"
+                        on_release:
+                            screen_manager.current="settings_screen"
+                            nav_drawer.set_state()
+                        IconLeftWidget:
+                            icon: "settings"

@@ -1,0 +1,29 @@
+
+<DashBoard>:
+    FloatLayout:
+        MDLabel:
+            id: sub_title
+            pos_hint:{"center_x":.5,"center_y":.98}
+            size_hint:(.5,.2)
+            theme_text_color: "Primary"
+            font_style:"H5"
+            halign:"center"
+            text: root.sub_title
+
+        MDRaisedButton:
+            pos_hint:{"x":.35, "top": .8}
+            size_hint:(.3,.1)
+            text:"Inicio"
+            on_release:
+                screen_manager.current="selorigen_destino"
+
+
+
+
+        MDRaisedButton:
+            pos_hint:{"x":.35, "top": .55}
+            size_hint:(.3,.1)
+            text:"Colaborador"
+
+
+
