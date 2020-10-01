@@ -1,28 +1,39 @@
-<MainWid>:
-    canvas:
-        Color:
-            #color blanco
-            rgb: 1, 1, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
 
-<StartWid>:
-    #orientacion
-    orientation: "vertical"
-    canvas:
+#: include kv/ventanaprincipal.kv
+#: include kv/ventanaseloridest.kv
+#: include kv/ventanaterminales.kv
+#: include kv/ventanaempresas.kv
+
+WindowManager:
+    canvas.before:
         Color:
-            #color azul
-            rgb: 0.3, 0.3, 0.9
+            rgb: 0,255,255
         Rectangle:
-            pos: self.pos
-            size: self.size
-    BoxLayout:
-        #70%
-        size_hint_y: 0.7
-    #boton
-    Button:
-        size_hint_y: 0.1
-    BoxLayout:
-        #20%
-        size_hint_y: 0.2
+            pos:self.pos
+            size:self.size
+
+
+    VentanaPrincipal:
+        #v1
+        id:ventana_principal
+        name:"ventana_principal"
+    VentanaSelOriDest:
+        #v2
+        id:ventanaselori_dest
+        name:"ventanaselori_dest"
+    VentanaTerminales:
+        #v3
+        id:ventana_terminales 
+        name:"ventana_terminales"
+    VentanaEmpresas:
+        #v4
+        id:ventana_empresas
+        name:"ventana_empresas"
+
+    
+
+    
+
+
+
+

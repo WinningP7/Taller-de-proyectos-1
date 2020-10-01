@@ -13,20 +13,14 @@ Config.set("graphics", "height","640")
 
 class MainWindow(Screen):
     pass    
+
 class SecondWindow(Screen):
     pass
-class ThirdWindow(Screen):
-    pass
-class FourthWindow(Screen):
-    pass
-class FifthWindow(Screen):
-    pass
-class SixthWindow(Screen):
-    pass
+
 class WindowManager(ScreenManager):
     pass
 
-kv=Builder.load_file("terminalapp.kv")
+kv=Builder.load_file("prueba01.kv")
 
 class Myapp(App):
     def build(self):
