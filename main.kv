@@ -1,0 +1,44 @@
+
+#: include kv/ventanaprincipal.kv
+#: include kv/ventanaseloridest.kv
+#: include kv/ventanaterminales.kv
+#: include kv/ventanaempresas.kv
+#: include kv/ventanabus.kv
+
+WindowManager:
+    canvas.before:
+        Color:
+            rgb: 0,255,255
+        Rectangle:
+            pos:self.pos
+            size:self.size
+
+
+    VentanaPrincipal:
+        #v1
+        id:ventana_principal
+        name:"ventana_principal"
+    VentanaSelOriDest:
+        #v2
+        id:ventanaselori_dest
+        name:"ventanaselori_dest"
+    VentanaTerminales:
+        #v3
+        id:ventana_terminales 
+        name:"ventana_terminales"
+    VentanaEmpresas:
+        #v4
+        id:ventana_empresas
+        name:"ventana_empresas"
+    VentanaBus:
+        #v5
+        id:ventana_bus
+        name:"ventana_bus"
+
+    
+
+    
+
+
+
+

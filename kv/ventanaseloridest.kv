@@ -1,0 +1,46 @@
+<VentanaSelOriDest>:
+    #name: "second"
+    GridLayout:
+        cols:1
+         
+        GridLayout:
+        
+            cols:2
+
+        FloatLayout:
+            Label:
+                text: "Elegir Ruta"
+                pos_hint:{'x':0.04,'y':0.5}
+                color: 1,0,1,1
+                
+        FloatLayout:
+            Spinner:
+                text: "Ciudad Origen"
+                size_hint:(1/3, 1/3)
+                pos_hint:{'x':0.1,'y':1.3}
+                values:["Huancayo","Lima"]
+                on_text:
+                    root.on_spinner_select(text)
+        
+        FloatLayout:
+            Spinner:
+                text: "Ciudad Destino"
+                size_hint:(1/3, 1/3)
+                pos_hint:{'x':0.6,'y':2.3}
+                values:["Huancayo","Lima"]
+                on_text:
+                    root.on_spinner_select(text)
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "Atrás"
+            on_release: 
+                #v1
+                app.root.current= "ventana_principal"
+        Button:
+            size_hint_y: 0.1
+            size_hint_x: 0.1
+            text: "siguiente ventana"
+            on_release: 
+                #v3
+                app.root.current= "ventana_terminales"
