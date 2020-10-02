@@ -1,7 +1,9 @@
 
 from kivymd.app import MDApp 
 from kivy.lang import Builder
+#gestionador pantallas
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivymd.uix.dialog import MDDialog
 
 
 from baseclass.ventanaprincipal import VentanaPrincipal

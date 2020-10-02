@@ -1,11 +1,72 @@
+< Item>:
+    ImageLeftWidget:
+        source: root.source
+
+
+
 <VentanaSelOriDest>:
     #name: "second"
+    #titulo de ventana
+    FloatLayout:
+        orientation:"vertical"
+        MDToolbar:
+            title:"TIMEBUS"
+            elevation: 10
+            pos_hint:{"center_x":0.5, "center_y":0.95}
+    
+    FloatLayout:
+        Spinner:
+            text: "Ciudad Origen"
+            #size_hint:(1/7, 1/7)
+            size_hint:(2/9, 1/9)
+            pos_hint:{'x':0.2,'y':0.6}
+            values:["Huancayo","Lima"]
+            on_text:
+                root.on_spinner_select(text)
+    FloatLayout:
+        Spinner:
+            text: "Ciudad Destino"
+            size_hint:(2/9, 1/9)
+            pos_hint:{'x':0.6,'y':0.6}
+            values:["Huancayo","Lima"]
+            on_text:
+                root.on_spinner_select(text)
+
+    FloatLayout:
+        MDLabel:
+            id:sub_title
+            pos_hint:{"center_x": .5, "center_y": .80}
+            size_hint: (.5, .2)
+            theme_text_color: "Primary"
+            font_style:"H5"
+            halign: "center"
+            text: root.sub_title 
+        
+        #MDFlatButton:
+        #    text: "ORIGEN Y DESTINO"
+        #    pos_hint: {"center_x": .5, "center_y": .7}
+
+        MDFlatButton:
+            text: "Localizar Terminales"
+            pos_hint: {"center_x": .5, "center_y": .4}
+            on_release: root.show_alert_dialog()
+
+        
+            
+
+        MDFlatButton:
+            text: "INFORMACION BUSES FACEBOOK"
+            pos_hint: {"center_x": .5, "center_y": .3}
+            on_release: root.show_alert_dialog()
+
     GridLayout:
         cols:1
          
         GridLayout:
         
             cols:2
+        
+
         Button:
             size_hint_y: 0.1
             size_hint_x: 0.1
